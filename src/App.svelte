@@ -11,12 +11,11 @@
 </script>
 
 <h1> Rendimiento de la batería durante el día</h1>
-<div class="col-container">
 
+<div class="col-container">
   {#each numbers as n}
-    
       <div class="col-wrapper">
-        <div class="column column-verde" style="height: {n * 162 / 100}px;"> </div>
+        <div class="column verde" style="height: {n * 162 / 100}px;"> </div>
         <img class="mask" src="./images/Union.svg" alt="">
       </div>
   {/each}
@@ -31,7 +30,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
-    margin-top: 250px;
+    margin-top: 200px;
     
 
   }
@@ -41,18 +40,17 @@
     width: 60px;
     margin-top: 0px;
     height: 100px;
-    margin: 10px;
+    margin: 50px;
   }
 
-  .column{
+  .column{    /* relleno de columnas */
     position: absolute;
     width: 65px;
-    bottom: 0;
-    right: 0;
-    left: 35px;    
+    bottom: -39px;
+    
   }
 
-  .column-verde{
+  .verde{
     background-color:green;
   }
 
@@ -61,15 +59,16 @@
   }
 
   .mask{
-    position:absolute;
+    position:relative;
     width:75px;
-    bottom: -2px;
+    bottom: 35px;
+    right: 5px;
     z-index: 1;
   }
 
   h1{
     font-size: 65px;
-    padding: 20px 0;
+    padding: 100px 0;
     margin: 0;
     align-items: flex-start;
     flex-direction: column;
