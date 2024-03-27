@@ -3,11 +3,6 @@
 
   let numbers= [10,25,33,62,75,100]
 
-  //binding
-  let color = 'red'
-  let num = 80
-
-
 </script>
 
 <h1> Rendimiento de la batería durante el día</h1>
@@ -15,7 +10,11 @@
 <div class="col-container">
   {#each numbers as n}
       <div class="col-wrapper">
-        <div class="column verde" style="height: {n * 162 / 100}px;"> </div>
+        {#if n > 30}
+          <div class="column verde" style="height: {n * 162 / 100}px;"> </div>
+        {:else}
+          <div class="column rojo" style="height: {n * 162 / 100}px;"> </div>
+        {/if}
         <img class="mask" src="./images/Union.svg" alt="">
       </div>
   {/each}
@@ -30,7 +29,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
-    margin-top: 200px;
+    margin-top: 0;
     
 
   }
@@ -47,6 +46,7 @@
     position: absolute;
     width: 65px;
     bottom: -39px;
+    left:0.2px;
     
   }
 
@@ -54,7 +54,7 @@
     background-color:green;
   }
 
-  .columm-rojo{
+  .rojo{
     background-color: red;
   }
 
@@ -67,14 +67,12 @@
   }
 
   h1{
+    font-family: 'Poppins', sans-serif;
     font-size: 65px;
-    padding: 100px 0;
-    margin: 0;
-    align-items: flex-start;
-    flex-direction: column;
+    margin-top: 200px;
+    text-align: center;
   }
 
-  
 
   
 
