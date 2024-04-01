@@ -20,8 +20,6 @@
   {/each}
 </div>
 
-
-
 <style>
 
   .col-container{
@@ -30,8 +28,6 @@
     align-items: center;
     flex-direction: row-reverse;
     margin-top: 0;
-    
-
   }
 
   .col-wrapper{
@@ -46,8 +42,7 @@
     position: absolute;
     width: 65px;
     bottom: -39px;
-    left:0.2px;
-    
+    left:0.2px;   
   }
 
   .verde{
@@ -72,10 +67,5 @@
     margin-top: 200px;
     text-align: center;
   }
-
-
-  
-
-
 
 </style>
